@@ -28,3 +28,30 @@ console.log(myFloat.toFixed(2));
 console.log(Math.PI)
 console.log(Math.trunc(Math.PI))
 console.log(Math.round(Math.PI, 3))
+
+// If conditions
+let check ="Please";
+if (check) {
+  console.log(check);
+} else if (check === "Please") {
+  console.log("please check for me.")
+} else {
+  console.log("Sorry we got nothing")
+}
+
+//switch
+let myCase = "4" 
+switch (myCase) {
+  case "1":
+    console.log("One");
+    break;
+  case "2":
+    console.log("Twoooo");
+    break;
+  case "3":
+    console.log("Three");
+    break;
+  default:
+    console.log("Nothing");
+    break;
+}
