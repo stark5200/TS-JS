@@ -73,7 +73,7 @@ let myGrade =
 console.log(myGrade);
 
 // User Input
-var namee = "AmMaR";
+let namee = "AmMaR";
 let myBool = confirm("Ok === true \nCancel === false");
 console.log(myBool);  
 namee = prompt("Please enter your name");
@@ -116,4 +116,12 @@ const toProperCase = function (nam) {
 
 console.log(toProperCase(namee) + "\n" + toSmallerCase(namee))
 
-// scope
+// scope try to use const and let, avoid var 
+// var, let, const
+// var doesn't catch redeclaration
+// let and var allow reassignment
+// var instantiates function() scoped variables
+// const and let instantiate {block} scoped variables
+
+//Arrays
+
