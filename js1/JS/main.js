@@ -55,3 +55,30 @@ switch (myCase) {
     console.log("Nothing");
     break;
 }
+
+
+//Ternary operator con ? ifT : ifF;
+let testScore = 75;
+let myGrade = 
+  testScore > 89
+    ? "A"
+    : testScore > 79
+    ? "B"
+    : testScore > 69
+    ? "C"
+    : testScore > 59
+    ? "D"
+    : "F";
+
+console.log(myGrade);
+
+// User Input
+let myBool = confirm("Ok === true \nCancel === false");
+console.log(myBool);  
+let name = prompt("Please enter your name");
+if (name.trim().length) {
+console.log(name ?? "Your Name");
+} else {
+  console.log("Your Name");
+}
+ // ... spread operator ^ xor operator ?. Optional chaining The ?. operator returns undefined if an object is undefined or null (instead of throwing an error). ?? Nullish Coalescing The ?? operator returns the first argument if it is not nullish (null or undefined). 
