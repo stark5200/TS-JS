@@ -73,11 +73,12 @@ let myGrade =
 console.log(myGrade);
 
 // User Input
+var namee = "AmMaR";
 let myBool = confirm("Ok === true \nCancel === false");
 console.log(myBool);  
-let name = prompt("Please enter your name");
-if (name.trim().length) {
-console.log(name ?? "Your Name");
+namee = prompt("Please enter your name");
+if (namee.trim().length) {
+console.log(namee ?? "Your Name");
 } else {
   console.log("Your Name");
 }
@@ -95,4 +96,24 @@ let n = 0;
  // for (let i = 0; i < 50; i++) { Something; } not all paremeters are necessary for example 
  // let i = 0; for (; i <= 50;) {something; i++; }
 
- // functions
+ // Functions, Methods are built in functions .toLowerCase() or Math.random()
+ 
+ function sum(num1, num2) { // remember to handle undefined and NaN
+  return num1 + num2;
+ }
+
+ console.log(sum(5, 7));
+
+// Anonymos functions
+const toProperCase = function (nam) {
+  return nam.toUpperCase();
+ }
+
+ // Arrow functions
+ const toSmallerCase = (nam) => {
+  return nam.toLowerCase();
+ }
+
+console.log(toProperCase(namee) + "\n" + toSmallerCase(namee))
+
+// scope
