@@ -81,4 +81,18 @@ console.log(name ?? "Your Name");
 } else {
   console.log("Your Name");
 }
- // ... spread operator ^ xor operator ?. Optional chaining The ?. operator returns undefined if an object is undefined or null (instead of throwing an error). ?? Nullish Coalescing The ?? operator returns the first argument if it is not nullish (null or undefined). 
+ // ... spread operator ^ xor operator ?. Optional chaining The ?. operator returns undefined if an object is undefined or null (instead of throwing an error). ?? Nullish Coalescing The ?? operator returns the first argument if it is not nullish (null or undefined).
+ 
+ // loops 
+let n = 0;
+ while (n < 5) {
+  console.log(n)
+  n++;
+ }
+ // break and continue keywords
+
+ // do {} while ();
+ // for (let i = 0; i < 50; i++) { Something; } not all paremeters are necessary for example 
+ // let i = 0; for (; i <= 50;) {something; i++; }
+
+ // functions
