@@ -124,4 +124,26 @@ console.log(toProperCase(namee) + "\n" + toSmallerCase(namee))
 // const and let instantiate {block} scoped variables
 
 //Arrays
+const myArray = [];
+
+myArray[0] = "Ammar";
+myArray[1] = 123;
+myArray[2] = true;
+myArray[3] = "hello";
+
+console.log(myArray);
+myArray.length;
+
+myArray.push("item");
+myArray.pop(); // returns popped item
+
+const newLength = myArray.unshift("item"); //add to start of array also returns array length after adding (same for push)
+const firstItem = myArray.shift(); //returns first/removed item
+
+delete myArray[2]; // bad idea, item becomes undefined
+myArray.splice(1, 1, 42); // at position 1 remove 1 item and replace with 42
+myArray.splice(2, 0, "hi"); // at position 2 add ietem "hi"
+myArray.splice(1, 2, ["old", 3]); // at position 1 remove 2 items and add item ["old", 3]
+console.log(myArray.slice.apply(2));
+// .reverse()    .join() adds commas between items .concat       
 
