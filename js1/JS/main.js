@@ -145,5 +145,8 @@ myArray.splice(1, 1, 42); // at position 1 remove 1 item and replace with 42
 myArray.splice(2, 0, "hi"); // at position 2 add ietem "hi"
 myArray.splice(1, 2, ["old", 3]); // at position 1 remove 2 items and add item ["old", 3]
 console.log(myArray.slice.apply(2));
-// .reverse()    .join() adds commas between items .concat       
+// .reverse()    .join() adds commas between items .concat  
+
+
+// Objects
 
