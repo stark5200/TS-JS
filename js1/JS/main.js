@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Hiiiiiiiiiiiiiii")
 //strings
 const myVariable = "Mathematics";
@@ -186,3 +188,56 @@ for (let v in newObj) {
   // delete , hasOwnProperty, Some deconstructering is also possible  
 }
 
+// Javascript classes
+
+class Pizza {
+  #sauce = "traditional" // # marks private
+  constructor (pizzaType) {
+    this.type = pizzaType, 
+    this.size = "medium", 
+    this.crust = "thin"
+  }
+
+  get pizzaCrust () {
+    return this.crust;
+  }
+
+  set pizzaCrust (crustType) {
+    this.crust = crustType;
+  }
+
+  bake () {
+    console.log("hbhbhbjlh");
+  }
+}
+
+const myPizza = new Pizza("Peporonnin");
+myPizza.bake();
+
+// extends
+// Factory Function
+
+
+
+// Error Handling
+const makeError = () => {
+  try {
+    const bla = "hello Ammar";
+    throw new customError("hihil"); // throw new Error("jifn"); generic error
+    bla = "never mind";
+  } catch (err) {
+    console.table(err);
+    console.error(err.name); // also error.stack or error.message
+    logTheError(err.stack)
+  }
+} 
+
+makeError();
+
+function customError(message) {
+  this.message = message;
+  this.name = "error name";
+  this.stack = `${this.name}: ${this.message}`;
+}
+
+// DOM Document object model
