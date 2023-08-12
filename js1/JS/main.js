@@ -149,4 +149,40 @@ console.log(myArray.slice.apply(2));
 
 
 // Objects
+const myObj = {soup: "dave"};
+console.log(myObj);
+console.log(myObj.soup);
+// nested objects also possible
+
+const anotherObj = {
+  alive: true, 
+  answer: 42, 
+  hobbies: ["Gaming", "hoops"], 
+  beverage: {
+    early: "Coffee", 
+    day: "Water"
+  }, 
+
+  action: function () {
+    return `Time for ${this.beverage.day}`;
+  }
+}
+
+console.log(anotherObj["alive"])
+console.log(anotherObj.action())
+
+let newObj = Object.create(anotherObj);
+newObj.answer = 50;
+console.log(newObj.answer);
+console.log(anotherObj.answer)
+
+console.log(Object.keys(newObj))
+console.log(Object.values(newObj))
+console.log(Object.values(newObj))
+
+for (let v in newObj) {
+  console.log(newObj[v] + v)
+
+  // delete , hasOwnProperty, Some deconstructering is also possible  
+}
 
