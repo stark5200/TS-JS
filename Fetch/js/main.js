@@ -88,7 +88,30 @@ const getAllUserEmails = async () => {
     return user.email;
   });
 
-  console.log(userEmailArray);
+  postToWebage(userEmailArray);
+}
+
+const postToWebage = (data) => {
+  console.log(data);
 }
 
 getAllUserEmails();
+
+// 2nd paremeter of fetch is an object
+
+const getDadJoke = async () => {
+  const response = await fetch("https://icanhazdadjoke.com/", {
+    method: "GET",
+    headers: {
+      Accept: "application/json"
+    }
+  });
+  const jsonJokeData = await response.json();
+
+  console.log(jsonJokeData.joke);
+}
+
+getDadJoke();
+
+
+// skipped rest of jokes part
