@@ -1,4 +1,4 @@
-let stringArr = ['one', 'hey', 'ammar']
+/* let stringArr = ['one', 'hey', 'ammar']
 
 let guitars = ['strat', 'les paul', 5150]
 
@@ -70,4 +70,38 @@ enum Grade {
   A, 
 }
 
-console.log(Grade.C)
+console.log(Grade.C) */
+
+// Lesson 04 Type aliases and functions
+type stringOrNumber = string | number
+type stringOrNumberArray = (string | number)[]
+
+interface Pianist  {
+  name?: string,
+  active?: boolean,
+  albums: stringOrNumberArray
+}
+
+type userId = stringOrNumber  
+// interface userId = stringOrNumber  wont work
+
+// Literal type
+let myName: 'Ammar' | 'Steve' | 'Amy'
+myName = 'Steve'
+
+// functions
+const add = (a: number, b:number) => {
+  return a +b
+}
+
+const logMessaege = (message: any): void => {
+  console.log(message)
+}
+
+type mathFunction = (a:number, b: number) => number
+
+const multiply: mathFunction = function(c, d) {
+  return c * d
+} 
+
+// more weird type things with functions
