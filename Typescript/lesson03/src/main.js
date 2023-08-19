@@ -97,5 +97,14 @@ var addOrConcat = function (a, b, c) {
     return '' + a + b;
 };
 var myVal = addOrConcat(2, 2, 'concat');
-var myBal = addOrConcat(4, 1, 'add')(10); // allowed force casting / double casting
+var myBal = addOrConcat(4, 1, 'add');
+// Be careful with assertions
+// 10 as string  not allowed
+10; // allowed force casting / double casting
 // The Dom
+var img = document.querySelector('img');
+var myImg = document.getElementById('#img'); // non null assertion
+var nextImg = document.getElementById('#img'); // no work in tsx files for react
+img.src;
+myImg.src;
+// Classes

@@ -126,10 +126,18 @@ const addOrConcat = (a:number, b:number, c:'add' | 'concat'): number | string =>
 } 
 
 let myVal: string = addOrConcat(2, 2, 'concat') as string
-let myBal: string = <string>addOrConcat(4, 1, 'add')
+let myBal: number = addOrConcat(4, 1, 'add') as number
 // Be careful with assertions
 
 // 10 as string  not allowed
 (10 as unknown) as string  // allowed force casting / double casting
 
 // The Dom
+const img = document.querySelector('img') as HTMLImageElement
+const myImg = document.getElementById('#img')! as HTMLImageElement // non null assertion
+const nextImg = <HTMLImageElement>document.getElementById('#img')  // no work in tsx files for react
+
+img.src 
+myImg.src
+
+// Classes
