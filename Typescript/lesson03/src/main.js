@@ -85,4 +85,17 @@ var logMessaege = function (message) {
 var multiply = function (c, d) {
     return c * d;
 };
-// more weird type things with functions
+// comvert to more or less specific type
+var a = 'hello';
+var b = a; // less specific
+var c = a; // more specific
+var d = 'world';
+var e = 'world';
+var addOrConcat = function (a, b, c) {
+    if (c === 'add')
+        return a + b;
+    return '' + a + b;
+};
+var myVal = addOrConcat(2, 2, 'concat');
+var myBal = addOrConcat(4, 1, 'add')(10); // allowed force casting / double casting
+// The Dom

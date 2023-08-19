@@ -105,3 +105,31 @@ const multiply: mathFunction = function(c, d) {
 } 
 
 // more weird type things with functions
+
+// Type Assertions / Casting
+
+type One = string
+type Two = string | number
+type Three = 'hello'
+
+// comvert to more or less specific type
+let a: One = 'hello'
+let b = a as Two // less specific
+let c = a as Three // more specific
+
+let d = <One>'world'
+let e = <string>'world'
+
+const addOrConcat = (a:number, b:number, c:'add' | 'concat'): number | string => {
+  if (c === 'add') return a + b
+  return '' + a + b
+} 
+
+let myVal: string = addOrConcat(2, 2, 'concat') as string
+let myBal: string = <string>addOrConcat(4, 1, 'add')
+// Be careful with assertions
+
+// 10 as string  not allowed
+(10 as unknown) as string  // allowed force casting / double casting
+
+// The Dom
