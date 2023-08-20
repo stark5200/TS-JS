@@ -165,4 +165,10 @@ class Coder {
   // getters and setters  
 }
 
-const Ammar = new Coder('Ammar', 'Hip-Hop', 25)   
+const Ammar = new Coder('Ammar', 'Hip-Hop', 25) 
+
+// Extends and Implements, Make Interface like class
+//.
+//.
+//.
+// Index Signatures and keyof Assertions   
