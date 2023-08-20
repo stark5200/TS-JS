@@ -141,3 +141,28 @@ img.src
 myImg.src
 
 // Classes
+
+class Coder {
+  /* name: string
+  music:  string
+  age: number
+  lang: string */
+  secondLang!: string // no need to initialize in constructor
+
+  constructor(  // adding visibility modifiers removes the need from declaring the paremeters up top
+    public readonly name: string,
+    public music:string,
+    private age: number,
+    protected lang:string = 'English'
+  ) {
+    this.name = name
+    this.music = music
+    this.age = age
+    this.lang = lang
+  }
+
+
+  // getters and setters  
+}
+
+const Ammar = new Coder('Ammar', 'Hip-Hop', 25)   
