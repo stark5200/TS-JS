@@ -151,3 +151,7 @@ const assign1 = {
 console.log(updateAssignment(assign1, { grade: 95 }));
 const assignGraded = updateAssignment(assign1, { grade: 95 });
 // Required and ReadOnly
+const recordAssignment = (assign) => {
+    //send to database or whatever
+    return assign;
+};
