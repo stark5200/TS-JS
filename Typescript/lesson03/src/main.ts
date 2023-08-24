@@ -254,3 +254,38 @@ const gradeData: Record<Students, Grades> = {
 }
 
 // Pick and Omit
+
+type AssignResult = Pick<Assignment, "studentId" | "grade">
+
+const score: AssignResult = {
+  studentId: "k132", 
+  grade: 85,
+}
+
+type AssignPreview = Omit<Assignment, "grade" | "verified">
+
+const preview: AssignPreview = {
+  studentId: "k132", 
+  title: "Final Project",
+}
+
+// Exclude and Extract
+
+type adjustedGrade = Exclude<LetterGrades, "U">
+
+type highGrades = Extract<LetterGrades, "A" | "B">
+
+// Nonnullable
+
+type AllPossibleGrades = 'Dave' |'john'| null | undefined
+type NamesOnly = NonNullable<AllPossibleGrades>
+
+// ReturnType
+
+type NewAssign = { title: string, points: number }
+
+const createNewAssign = (title: string, points: number): NewAssign => {
+  return {title, points}
+}
+
+// Vite
