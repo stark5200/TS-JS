@@ -133,15 +133,15 @@ let myBal: number = addOrConcat(4, 1, 'add') as number
 (10 as unknown) as string  // allowed force casting / double casting
 
 // The Dom
-const img = document.querySelector('img') as HTMLImageElement
-const myImg = document.getElementById('#img')! as HTMLImageElement // non null assertion
-const nextImg = <HTMLImageElement>document.getElementById('#img')  // no work in tsx files for react
+//const img = document.querySelector('img') as HTMLImageElement
+//const myImg = document.getElementById('#img')! as HTMLImageElement // non null assertion
+//const nextImg = <HTMLImageElement>document.getElementById('#img')  // no work in tsx files for react
 
-img.src 
-myImg.src
+//img.src 
+//myImg.src
 
 // Classes
-
+//
 class Coder {
   /* name: string
   music:  string
@@ -177,4 +177,40 @@ const Ammar = new Coder('Ammar', 'Hip-Hop', 25)
 
 // Chapter 8 Generics
 
-// hello 
+const echo = <T>(arg: T): T => arg
+
+const isObj = <T>(arg: T): boolean => {
+  return (typeof arg === 'object' && !Array.isArray(arg) && arg !== null)
+}
+
+console.log(isObj(true))
+console.log(isObj('john'))
+console.log(isObj([123]))
+console.log(isObj({name: 'john'}))
+console.log(isObj(null))
+
+// chapter 9 Utility types
+
+// Partial
+
+interface Assignment {
+  studentId: string, 
+  title: string, 
+  grade: number, 
+  verified?: boolean,
+}
+
+const updateAssignment = (assign: Assignment, propsToUpdate: Partial<Assignment>): Assignment => {
+  return { ...assign, ...propsToUpdate}
+}
+
+const assign1: Assignment = {
+  studentId: "compsci123", 
+  title: "Final Project",
+  grade: 0,
+}
+
+console.log(updateAssignment(assign1, { grade: 95}))
+const assignGraded: Assignment = updateAssignment(assign1, {grade: 95})
+
+// Required and ReadOnly
