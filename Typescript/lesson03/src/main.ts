@@ -220,7 +220,7 @@ const recordAssignment = (assign: Required<Assignment>): Assignment => {
   return assign
 }
 
-const assignVerified: readonly<Assignment> = {
+const assignVerified: Readonly<Assignment> = {
   ...assignGraded, verified: true
 }
 
