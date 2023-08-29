@@ -1,8 +1,8 @@
 import useCart from "../hooks/useCart"
 import useProducts from "../hooks/useProducts"
-import { UseProductsContextType } from "../context/ProductsProvider"
 import { ReactElement } from "react"
 import Product from "./Product"
+//import { UseProductsContextType } from "../context/ProductsProvider"
 
 const ProductList = () => {
   const { dispatch, REDUCER_ACTIONS, cart } = useCart()
@@ -19,10 +19,9 @@ const ProductList = () => {
           key={product.sku}
           product={product}
           dispatch={dispatch}
-          REDUCEER_ACTIONS={REDUCER_ACTIONS}
+          REDUCER_ACTIONS={REDUCER_ACTIONS}
           inCart={inCart}
         />
-
       )
     })
   }
