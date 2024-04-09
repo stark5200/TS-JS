@@ -1,3 +1,5 @@
+// This folder is to learn Typescript
+
 import { useState, useEffect, useCallback, useMemo, MouseEvent, useRef, KeyboardEvent } from 'react'
 
 interface User {
